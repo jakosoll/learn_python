@@ -15,7 +15,8 @@ import re
 
 def is_acceptable_password(password: str) -> bool:
     search_num = re.search(r'\d', password)
-    return False if not search_num else len(password) > 6
+    search_char = re.search(r'\D', password)
+    return False if not search_num or not search_char else len(password) > 6
 
 
 if __name__ == '__main__':
