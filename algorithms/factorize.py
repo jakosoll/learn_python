@@ -25,7 +25,7 @@ class TestFactorize(unittest.TestCase):
                 self.assertRaises(ValueError, factorize, x)
 
     def test_simple_numbers(self):
-        cases = {5: 120, 4: 24}
+        cases = {5: 120, 4: 24, 10: 3628800}
         for x, y in cases.items():
             with self.subTest(x=x):
                 self.assertEqual(factorize(x), y)
